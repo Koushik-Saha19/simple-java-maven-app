@@ -6,11 +6,11 @@ pipeline {
     }
     stages {
         stage ('Jmeter Test') {
-            step {
+            steps {
                 sh '/opt/jmeter/apache-jmeter-5.2.1/bin/jmeter.sh -jjmeter.save.saveservice.output_format=xml -n -t /home/ubuntu/test.jmx -l /home/ubuntu/report.jtl'
         
             }
-            step([$class: 'ArtifactArchiver', artifacts: 'Test.html', fingerprint: true])
+            
         }
     }
 }
