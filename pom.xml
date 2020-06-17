@@ -38,7 +38,7 @@
         <version>2.9.0</version>
         <executions>
           <execution>
-             <id>test</id>
+             <id>jmeter-tests</id>
              <goals>
                 <goal>jmeter</goal>
              </goals>
