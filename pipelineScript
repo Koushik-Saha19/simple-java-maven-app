@@ -1,0 +1,4 @@
+node {
+  stage 'Run JMeter Test'
+  sh '/opt/jmeter/apache-jmeter-5.2.1/bin/jmeter.sh -n -t /root/test.jmx -l /root/report.jtl'
+}
