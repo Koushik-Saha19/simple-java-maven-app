@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ('Jmeter Test') {
             steps {
-                sh '/opt/jmeter/apache-jmeter-5.2.1/bin/jmeter.sh -jjmeter.save.saveservice.output_format=xml -n -t /home/ubuntu/test.jmx -l /home/ubuntu/report.jtl -e -o /home/ubuntu/report'
+                sh '/opt/jmeter/apache-jmeter-5.2.1/bin/jmeter.sh -jjmeter.save.saveservice.output_format=xml -n -t /opt/jmeter/apache-jmeter-5.2.1/res/test.jmx -l /opt/jmeter/apache-jmeter-5.2.1/res/report.jtl -e -o /opt/jmeter/apache-jmeter-5.2.1/res/report'
         
             }
             
