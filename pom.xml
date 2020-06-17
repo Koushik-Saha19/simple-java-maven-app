@@ -44,6 +44,12 @@
              </goals>
              <phase>verify</phase>
           </execution>
+          <execution>
+            <id>jmeter-check-results</id>
+            <goals>
+              <goal>results</goal>
+            </goals>
+          </execution>
         </executions>
         <configuration>
           <overrideRootLogLevel>debug</overrideRootLogLevel>
