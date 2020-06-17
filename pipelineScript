@@ -15,7 +15,7 @@ pipeline {
     }
     post {
         always {
-            step([$class: 'ArtifactArchiver', artifacts: artifacts: '**/*.jtl'])
+            step([$class: 'ArtifactArchiver', artifacts: '**/*.jtl'])
         }
     }
 }
