@@ -15,7 +15,7 @@ pipeline {
     }
     post {
         always {
-            step([$class: 'ArtifactArchiver', artifacts: '/home/ubuntu/*.xml'])
+            step([$class: 'ArtifactArchiver', artifacts: '**/*.xml'])
         }
     }
 }
