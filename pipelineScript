@@ -13,10 +13,6 @@ pipeline {
             
         }
     }
-    post {
-        always {
-            step([$class: 'ArtifactArchiver', artifacts: '/opt/jmeter/apache-jmeter-5.2.1/bin/report2.jtl'])
-        }
-    }
+  
   
 }
