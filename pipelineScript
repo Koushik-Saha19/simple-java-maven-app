@@ -17,7 +17,7 @@ pipeline {
     post {
         always {
                 
-                perfReport compareBuildPrevious: true, filterRegex: '', sourceDataFiles: '/var/lib/jenkins/workspace/pipeline-job-3/report2.jtl'
+                perfReport compareBuildPrevious: true, filterRegex: '', sourceDataFiles: '/opt/jmeter/apache-jmeter-5.2.1/bin/report2.jtl'
                
         }
     }
