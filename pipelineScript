@@ -16,10 +16,9 @@ pipeline {
     }
     post {
         always {
-            steps {
                 step([$class: 'ArtifactArchiver', artifacts: '**/*.jtl'])
                 perfReport filterRegex: '', sourceDataFiles: '/opt/jmeter/apache-jmeter-5.2.1/bin/report2.jtl'
-               }
+               
         }
     }
   
