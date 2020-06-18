@@ -13,6 +13,10 @@ pipeline {
             
         }
     }
-    
+    post {
+        always {
+            step([$class: 'ArtifactArchiver', artifacts: '**/*.xml'])
+        }
+    }
   
 }
