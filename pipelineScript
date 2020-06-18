@@ -8,7 +8,7 @@ pipeline {
         stage ('Jmeter Test') {
             steps {
                 sh '/opt/jmeter/apache-jmeter-5.2.1/bin/jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /home/ubuntu/test.jmx -l /opt/jmeter/apache-jmeter-5.2.1/bin/report2.jtl'
-                sh 'cd /opt/jmeter/apache-jmeter-5.2.1/bin && mv report2.jtl /var/lib/jenkins/workspace/pipeline-job-3'
+                
         
             }
             
@@ -16,8 +16,8 @@ pipeline {
     }
     post {
         always {
-                step([$class: 'ArtifactArchiver', artifacts: '**/*.jtl'])
-                perfReport filterRegex: '', sourceDataFiles: '/var/lib/jenkins/workspace/pipeline-job-3/report2.jtl'
+                
+                perfReport filterRegex: '', sourceDataFiles: '/opt/jmeter/apache-jmeter-5.2.1/bin/report2.jtl'
                
         }
     }
