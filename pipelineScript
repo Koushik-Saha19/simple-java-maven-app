@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        maven 'LocalMVN'
-        jdk 'LocalJDK'
+        maven 'Apache Maven 3.3.9'
+        jdk 'JAVA_HOME'
     }
     stages {
         stage ('Jmeter Test') {
